@@ -1,0 +1,87 @@
+.formulario-contenedor{
+    background-color: rgb(234, 234, 234);
+    position: relative;
+    padding: 30px;
+    margin: auto;
+    margin-top: 80px;
+    width: 400px;
+    height: 600px;
+    display: block;
+    border-radius: 20px;
+}
+.formulario-contenedor h1{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.campo{
+    border-radius: 3px;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+}
+.textoarea{
+    resize: none;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 3px;
+}
+.textoarea::-webkit-scrollbar{
+    width: 10%;
+}
+
+.alert{
+    position: relative;
+    font-size: 13px;
+    color: red;
+    bottom: 18px;
+}
+.alert-desc{
+    position: relative;
+    color: red;
+    bottom: 5px;
+}
+.boton-guardar{
+    background-color: aqua;
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+    bottom: 10px;
+    cursor: pointer;
+    transition: .1s;
+}
+.boton-guardar:hover{
+    color: white;
+    background-color: rgb(0, 191, 191);
+}
+
+
+
+.file-imagen{
+    display: block;
+    visibility: hidden;
+}
+.label-imagen{
+    position: relative;
+    top: 8px;
+    padding: 10px 40px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid rgb(7, 255, 218);
+    cursor: pointer;
+    transition: .1s;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+.label-imagen:hover{
+    color: white;
+    background-color: rgb(7, 255, 218);
+}
+label {
+    letter-spacing: 2px;
+}

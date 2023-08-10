@@ -1,0 +1,107 @@
+.contenedor-formulario{
+    background-color: rgb(224, 224, 224);
+    position: relative;
+    padding: 30px;
+    margin: auto;
+    margin-top: 80px;
+    width: 400px;
+    height: 450px;
+    display: block;
+    border-radius: 20px;
+}
+.contenedor-formulario-forgot{
+    background-color: rgb(224, 224, 224);
+    position: relative;
+    padding: 30px;
+    margin: auto;
+    margin-top: 80px;
+    width: 400px;
+    height: 200px;
+    display: block;
+    border-radius: 20px;
+}
+.contenedor-formulario-forgot h1{
+    font-size: 30px;
+    text-align: center;
+}
+.contenedor-formulario-code{
+    background-color: rgb(224, 224, 224);
+    position: relative;
+    padding: 30px;
+    margin: auto;
+    margin-top: 80px;
+    width: 400px;
+    height: 200px;
+    display: block;
+    border-radius: 20px;
+}
+.contenedor-formulario-code h1{
+    font-size: 30px;
+    text-align: center;
+}
+.contenedor-formulario-reset{
+    background-color: rgb(224, 224, 224);
+    position: relative;
+    padding: 30px;
+    margin: auto;
+    margin-top: 80px;
+    width: 400px;
+    height: 300px;
+    display: block;
+    border-radius: 20px;
+}
+.contenedor-formulario-reset h1{
+    font-size: 30px;
+    text-align: center;
+}
+.contenedor-formulario h1{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.campo{
+    border-radius: 3px;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+}
+.campo-code{
+    position: relative;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    left: 80px;
+    width: 50%;
+    padding: 10px;
+}
+
+.alert{
+    position: relative;
+    font-size: 13px;
+    color: red;
+    bottom: 20px;
+}
+.boton-guardar{
+    background-color: aqua;
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+    bottom: 10px;
+    cursor: pointer;
+    transition: .1s;
+}
+.boton-guardar:hover{
+    color: white;
+    background-color: rgb(0, 191, 191);
+}
+.olvidoContraseña{
+   
+    position: relative;
+    top: 20px;
+    left: 90px;
+}
+
+
+

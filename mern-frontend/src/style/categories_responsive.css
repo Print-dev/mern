@@ -1,0 +1,112 @@
+.contenedor-lista{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.listas{
+    display: none;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    padding: 20px;
+    width: 80%;
+    border-radius: 20px;
+    top: 56px;
+    height: 0px;
+}
+
+.listas ul li:hover{
+    background-color: rgb(212, 232, 254);
+}
+
+.listas.abrir{
+    display: block;
+    height: 300px;
+}
+
+.cabecera{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 1px -2px 16px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px -2px 16px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px -2px 16px 0px rgba(0,0,0,0.75);
+}
+
+@media screen and (min-width: 1180px){
+    .cabecera{
+        display: none;
+    }
+    .cabecera .icono-usuario{
+        display: none;
+    }
+    .cabecera .icono-abrir-categoria{
+        display: none;
+    }
+}
+
+
+.cabecera .icono-usuario{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    right: 20px;
+}
+.cabecera .icono-abrir-categoria{
+    background-color: rgb(255, 255, 255);
+    font-size: 30px;
+}
+
+.contenedor-general-usuario{
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 1;
+}
+
+.contenedor-usuario-opciones{
+    background-color: rgb(255, 255, 255);
+    display: none;
+    flex-direction: row;
+    position: fixed;
+    padding: 30px;
+    right: 20px;
+    border-radius: 20px;
+    top: 56px;
+    z-index: 2;
+    text-align: center;
+}
+.contenedor-usuario-opciones.abrir{
+    display: flex;
+}
+
+.subir{
+    position: relative;
+    color: black;
+    bottom: 5px;
+}
+
+.subir:hover{
+    color: rgb(180, 180, 180);
+}
+
+.cerrar-sesion{
+    position: relative;
+    color: red;
+    top: 5px;
+}
+
+.cerrar-sesion:hover{
+    color: rgb(246, 76, 76);
+}

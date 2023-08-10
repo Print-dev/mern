@@ -1,0 +1,38 @@
+{
+  "name": "client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^1.2.2",
+    "bcryptjs": "^2.4.3",
+    "file-saver": "^2.0.5",
+    "firebase": "^9.15.0",
+    "formik": "^2.2.9",
+    "jsonwebtoken": "^9.0.0",
+    "lodash": "^4.17.21",
+    "nanoid": "^4.0.1",
+    "react": "^18.2.0",
+    "react-autosuggest": "^10.1.0",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.0",
+    "react-icons": "^4.7.1",
+    "react-router-dom": "^6.4.5",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "@vitejs/plugin-react": "^2.2.0",
+    "autoprefixer": "^10.4.13",
+    "gh-pages": "^5.0.0",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.7",
+    "vite": "^3.2.3"
+  }
+}

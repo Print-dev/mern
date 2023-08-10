@@ -22,7 +22,7 @@ export const PostProvider = function({children}) {
 
 
     const obtenerPosts = async ()=>{
-      const respuesta = await axios.get('https://apibackend-f04p.onrender.com/api/posts')
+      const respuesta = await axios.get('https://mern-backend-0gvx.onrender.com/api/posts')
       setPosts(respuesta.data)
       
     }
@@ -37,7 +37,7 @@ export const PostProvider = function({children}) {
         
         
 
-        const respuesta = await axios.post('https://apibackend-f04p.onrender.com/api/posts',formulario, {
+        const respuesta = await axios.post('https://mern-backend-0gvx.onrender.com/api/posts',formulario, {
           headers:{
             "Content-Type":"multipart/form-data",
             "x-access-token": token
@@ -52,23 +52,23 @@ export const PostProvider = function({children}) {
     }
     
     const obtenerPost = async (id) => {
-      const respuesta = await axios.get('https://apibackend-f04p.onrender.com/api/posts/' + id)
+      const respuesta = await axios.get('https://mern-backend-0gvx.onrender.com/api/posts/' + id)
 
       return respuesta.data
     }
 
     const postInfo = async (id) => {
-      const respuesta = await axios.get('https://apibackend-f04p.onrender.com/api/posts/' + id)
+      const respuesta = await axios.get('https://mern-backend-0gvx.onrender.com/api/posts/' + id)
       return respuesta.data.creadoPor
     }
 
     const obtenerUsuario = async (id) =>{
-      const usuarioEncontrado = axios.get('https://apibackend-f04p.onrender.com/api/users/' + id)
+      const usuarioEncontrado = axios.get('https://mern-backend-0gvx.onrender.com/api/users/' + id)
       return usuarioEncontrado
     }
 
     const eliminarPost = async (id) => {
-      const del = await axios.delete('https://apibackend-f04p.onrender.com/api/posts/' + id, {headers: {"x-access-token":token}})
+      const del = await axios.delete('https://mern-backend-0gvx.onrender.com/api/posts/' + id, {headers: {"x-access-token":token}})
       
       if (del.status == 200){
         setPosts(posts.filter(post => post._id !== id))
@@ -78,7 +78,7 @@ export const PostProvider = function({children}) {
 
     const registrarUsuario = async (userRegister) => {
       try {
-        const {data} = await axios.post("https://apibackend-f04p.onrender.com/api/register", userRegister)  
+        const {data} = await axios.post("https://mern-backend-0gvx.onrender.com/api/register", userRegister)  
         console.log(data)
         toast.success("usuario "+data.nombre+" registrado correctamente!", {duration:10000})
         navigate('/')
@@ -89,7 +89,7 @@ export const PostProvider = function({children}) {
 
     const logearUsuario = async (loginUser) => {
       try {
-        const {data} = await axios.post('https://apibackend-f04p.onrender.com/api/login', loginUser)
+        const {data} = await axios.post('https://mern-backend-0gvx.onrender.com/api/login', loginUser)
         
         setToken(data.token)
         setUserid(data.id)
@@ -106,7 +106,7 @@ export const PostProvider = function({children}) {
     
     const enviarSolicitudDeCambiodePWD = async (correo) =>{
       try {
-        const {data} = await axios.post('https://apibackend-f04p.onrender.com/api/forgotPassword', correo)
+        const {data} = await axios.post('https://mern-backend-0gvx.onrender.com/api/forgotPassword', correo)
         setTokenCode(data.token)
         console.log("ENVIAOOOOO")
         console.log(data)
@@ -120,7 +120,7 @@ export const PostProvider = function({children}) {
 
     const enviarCodigo = async (codigo) =>{
       try {
-        const {data} = await axios.post('https://apibackend-f04p.onrender.com/api/codigo-contrasena', codigo, {headers: {"token-pwd": tokenCode}})
+        const {data} = await axios.post('https://mern-backend-0gvx.onrender.com/api/codigo-contrasena', codigo, {headers: {"token-pwd": tokenCode}})
         setTokenResetPwd(data.token)
         
         if (data.errorMessage) return toast.error("el codigo no coincide")
@@ -132,7 +132,7 @@ export const PostProvider = function({children}) {
 
     const cambiarContraseña = async (contraseña) =>{
         try {
-          const {data} = await axios.post('https://apibackend-f04p.onrender.com/api/reset_password', contraseña, {headers: {'token-pwd': tokenResetPwd}})
+          const {data} = await axios.post('https://mern-backend-0gvx.onrender.com/api/reset_password', contraseña, {headers: {'token-pwd': tokenResetPwd}})
           
           if(data.messageError) return toast.error("las contraseñas no coinciden")
           else if (data.message) {
